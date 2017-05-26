@@ -2,8 +2,10 @@ package com.jy.jyjy.injector.components;
 
 import android.content.Context;
 
+import com.jy.jyjy.api.bean.Student;
 import com.jy.jyjy.injector.modules.ApplicationModule;
 import com.jy.jyjy.local.table.DaoSession;
+import com.jy.jyjy.module.base.IBasePresenter;
 import com.jy.jyjy.rxbus.RxBus;
 
 import javax.inject.Singleton;
@@ -17,11 +19,13 @@ import dagger.Component;
 @Singleton
 @Component(modules = ApplicationModule.class)
 public interface ApplicationComponent {
-
 //    void inject(BaseActivity baseActivity);
-
     // provide
-    Context getContext();
+   // Context getContext();
+
     RxBus getRxBus();
     DaoSession getDaoSession();
+
+    Student getStudent();
+
 }

@@ -3,7 +3,7 @@
              android:layout_width="match_parent"
              android:layout_height="@dimen/nav_header_height"
              xmlns:app="http://schemas.android.com/apk/res-auto"
-             android:background="@color/colorPrimaryDark"
+             android:background="@mipmap/logo_benner_header_bg"
              android:gravity="center"
              android:orientation="vertical"
              android:theme="@style/ThemeOverlay.AppCompat.Dark">
@@ -20,7 +20,7 @@
             android:id="@+id/iv_avatar"
             android:layout_width="@dimen/avatar_width"
             android:layout_height="@dimen/avatar_height"
-            android:src="@mipmap/avatar"
+            android:src="@mipmap/logo_benner_header"
             app:civ_border_width="1dp"
             app:civ_border_color="@android:color/white"/>
 
@@ -28,8 +28,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="@dimen/nav_header_vertical_spacing"
-            android:text="兰陵王"
+            android:text="王健林医生"
+            android:textColor="#FF1A191F"
+            android:textSize="14sp"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
     </LinearLayout>
-
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_gravity="bottom"
+        android:background="#FFEEEEEE"
+        />
 </FrameLayout>

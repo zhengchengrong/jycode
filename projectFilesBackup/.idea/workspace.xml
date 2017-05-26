@@ -7,7 +7,7 @@
       </config>
     </shared>
     <layouts>
-      <layout url="file://$PROJECT_DIR$/RecyclerViewHelper/src/main/res/layout/layout_load_more.xml">
+       <layout url="file://$PROJECT_DIR$/RecyclerViewHelper/src/main/res/layout/layout_load_more.xml">
         <config>
           <theme>@android:style/Theme.Material.Light</theme>
         </config>

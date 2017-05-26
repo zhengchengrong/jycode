@@ -16,6 +16,7 @@ import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import com.jy.downloaderlib.FileDownloader;
+import com.jy.jyjy.api.bean.Student;
 import com.jy.jyjy.module.base.BaseActivity;
 import com.jy.jyjy.module.inspect.main.InspectMainFragment;
 import com.jy.jyjy.module.manage.setting.SettingsActivity;
@@ -26,6 +27,8 @@ import com.jy.jyjy.utils.SnackbarUtils;
 import com.tbruyelle.rxpermissions.RxPermissions;
 
 import java.io.File;
+
+import javax.inject.Inject;
 
 import butterknife.BindView;
 import rx.functions.Action1;
@@ -43,6 +46,11 @@ public class HomeActivity  extends BaseActivity implements NavigationView.OnNavi
     NavigationView mNavView;
     @BindView(R.id.drawer_layout)
     DrawerLayout mDrawerLayout;
+
+
+    @Inject
+    Student student;
+
     // 本来想用这个来存储Fragment做切换，不过貌似fragment会被回收产生异常，估计内存占用太大
 //    private SparseArray<Fragment> mSparseFragments = new SparseArray<>();
     private SparseArray<String> mSparseTags = new SparseArray<>();
@@ -61,7 +69,7 @@ public class HomeActivity  extends BaseActivity implements NavigationView.OnNavi
                 case R.id.nav_videos:
                     replaceFragment(R.id.fl_container, new VideoMainFragment(), mSparseTags.get(R.id.nav_videos));
                     break;
-                case R.id.nav_setting:
+                case R.id.nav_zhuli_list:
                     SettingsActivity.launch(HomeActivity.this);
                     break;
             }
@@ -178,5 +186,8 @@ public class HomeActivity  extends BaseActivity implements NavigationView.OnNavi
         } else {
             finish();
         }
+    }
+    public void showDrawerLayout() {
+        mDrawerLayout.openDrawer(GravityCompat.START);
     }
 }

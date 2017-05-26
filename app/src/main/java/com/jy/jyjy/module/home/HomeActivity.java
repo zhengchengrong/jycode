@@ -60,7 +60,7 @@ public class HomeActivity extends BaseActivity implements NavigationView.OnNavig
                 case R.id.nav_videos:
                     replaceFragment(R.id.fl_container, new VideoMainFragment(), mSparseTags.get(R.id.nav_videos));
                     break;
-                case R.id.nav_setting:
+                case R.id.nav_zhuli_list:
                     SettingsActivity.launch(HomeActivity.this);
                     break;
             }

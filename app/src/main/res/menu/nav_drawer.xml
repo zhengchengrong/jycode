@@ -1,28 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <group android:checkableBehavior="single">
+    <group
+        android:id="@+id/nva_group1"
+        android:checkableBehavior="none"
+        >
         <item
             android:id="@+id/nav_news"
-            android:icon="@mipmap/ic_nav_news"
-            android:title="新闻"/>
-
-        <item
+            android:icon="@mipmap/logo_benner_account"
+            android:title="账户明细"/>
+    </group>
+    <group
+        android:id="@+id/nva_group2"
+        android:checkableBehavior="none"
+        >
+    <item
             android:id="@+id/nav_photos"
-            android:icon="@mipmap/ic_nav_picture"
-            android:title="图片"/>
-
+            android:icon="@mipmap/logo_benner_youhui"
+            android:title="优惠券"/>
+</group>
+    <group
+        android:id="@+id/nva_group3"
+        android:checkableBehavior="none"
+        >
         <item
             android:id="@+id/nav_videos"
-            android:icon="@mipmap/ic_nav_video"
-            android:title="视频"/>
+            android:icon="@mipmap/logo_benner_jifen"
+            android:title="积分"/>
     </group>
-
-    <group android:checkableBehavior="none">
-
+    <group
+        android:id="@+id/nva_group4"
+        android:checkableBehavior="none"
+        >
         <item
-            android:id="@+id/nav_setting"
-            android:icon="@mipmap/ic_nav_setting"
-            android:title="设置"/>
+            android:id="@+id/nav_my_code"
+            android:icon="@mipmap/logo_benner_code"
+            android:title="我的二维码"/>
+        </group>
+    <group
+        android:id="@+id/nva_group5"
+        android:checkableBehavior="none"
+        >
+        <item
+            android:id="@+id/nav_zhuli_list"
+            android:icon="@mipmap/logo_benner_zhuli"
+            android:title="助理列表"/>
     </group>
 </menu>

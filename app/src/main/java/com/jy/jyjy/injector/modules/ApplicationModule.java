@@ -3,6 +3,7 @@ package com.jy.jyjy.injector.modules;
 import android.content.Context;
 
 import com.jy.jyjy.AndroidApplication;
+import com.jy.jyjy.api.bean.Student;
 import com.jy.jyjy.local.table.DaoSession;
 import com.jy.jyjy.rxbus.RxBus;
 
@@ -22,6 +23,8 @@ public class ApplicationModule {
     private final DaoSession mDaoSession;
     private final RxBus mRxBus;
 
+    private static int count = 0;
+
     public ApplicationModule(AndroidApplication application, DaoSession daoSession, RxBus rxBus) {
         mApplication = application;
         mDaoSession = daoSession;
@@ -31,7 +34,7 @@ public class ApplicationModule {
     @Provides
     @Singleton
     Context provideApplicationContext() {
-        return mApplication.getApplication();
+        return mApplication.getContext();
     }
 
     @Provides
@@ -45,4 +48,17 @@ public class ApplicationModule {
     DaoSession provideDaoSession() {
         return mDaoSession;
     }
+
+    @Provides
+    @Singleton
+    Student providerStudent() {
+        return new Student(23, "jack" + String.valueOf(count++));
+    }
+
+    @Provides
+    @Singleton
+    Context providerApplicationContext() {
+        return mApplication.getContext();
+    }
+
 }
